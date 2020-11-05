@@ -7,8 +7,19 @@ public class TicTacToeGame {
 	public static void main(String[] args) {
 		createBoard();
 		callXorO();
+		showboard();
 	}
-//UC2
+//UC3 Show The Board
+private static void showboard() {
+	
+		System.out.println("|" +board[1] + "|" +board[2]+ "|" +board[3]+ "|" );
+		System.out.println("-------");
+		System.out.println("|" +board[4] + "|" +board[5]+ "|" +board[6]+ "|" );
+		System.out.println("-------");
+		System.out.println("|" +board[7] + "|" +board[8]+ "|" +board[9]+ "|" );
+		
+	}
+//UC2 Select Option X or O For User
 	public static void callXorO() {
 		char player = ' ';
 		char computer = ' ';
@@ -26,9 +37,9 @@ public class TicTacToeGame {
 		while (true) {
 			System.out.println("Select either X or O");
 			player = sc.next().charAt(0);
-			if (player == 'X') {
+			if (player == 'x') {
 				return 'X';
-			} else if (player == 'O') {
+			} else if (player == 'o') {
 				return 'O';
 			} else {
 				System.out.println("Invalid choice");
@@ -36,7 +47,7 @@ public class TicTacToeGame {
 			}
 		}
 	}
-//UC1
+//UC1 Create Empty Voard
 	static void createBoard() {
 		for (int index = 1; index < board.length; index++) {
 			board[index] = ' ';
